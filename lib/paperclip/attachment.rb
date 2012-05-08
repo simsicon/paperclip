@@ -99,7 +99,7 @@ module Paperclip
       instance_write(:content_type,    file.content_type.to_s.strip)
       instance_write(:file_size,       file.size)
       instance_write(:fingerprint,     file.fingerprint) if instance_respond_to?(:fingerprint)
-      instance_write(:updated_at,      Time.now)
+      instance_write(:updated_at,      Time.now.to_f.to_i)
 
       @dirty = true
 
