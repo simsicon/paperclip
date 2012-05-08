@@ -257,8 +257,7 @@ module Paperclip
     # Returns the last modified time of the file as originally assigned, and
     # lives in the <attachment>_updated_at attribute of the model.
     def updated_at
-      time = instance_read(:updated_at)
-      time && time.to_f.to_i
+      instance_read(:updated_at)
     end
 
     # The time zone to use for timestamp interpolation.  Using the default
